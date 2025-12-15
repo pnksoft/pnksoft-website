@@ -1,33 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>PNK SOFT - 공식 웹사이트</title>
-    <style>
-        body { font-family: Arial; padding: 40px; line-height: 1.7; }
-        h1 { font-size: 26px; }
-        .box { background: #f6f6f6; padding: 20px; border-radius: 8px; }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNK SOFT 공식 웹사이트 - VioPlayer</title>
+    <style>
+        /* Global Styles */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; padding: 0; background-color: #ffffff; color: #333; line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        h1, h2, h3 { color: #1a1a1a; }
+
+        /* Header */
+        header { background-color: #2c3e50; color: white; padding: 20px 0; text-align: center; }
+        header h1 { margin: 0; font-size: 32px; font-weight: 700; }
+        header p { margin-top: 5px; font-size: 18px; opacity: 0.9; }
+
+        /* Section Styling */
+        section { padding: 60px 0; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 30px; font-weight: 600; border-bottom: 3px solid #2c3e50; display: inline-block; padding-bottom: 5px; }
+
+        /* Feature Grid */
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-item { text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s; }
+        .feature-item:hover { transform: translateY(-5px); }
+        .feature-item img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; border: 1px solid #eee; }
+        .feature-item h3 { font-size: 20px; margin-top: 0; color: #34495e; }
+
+        /* Company Info */
+        .company-info { background-color: #f4f4f4; padding: 40px 0; border-top: 1px solid #ddd; }
+        .info-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        .info-box h2 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; margin-bottom: 20px; }
+        .info-box p strong { display: inline-block; min-width: 120px; color: #555; }
+        .info-box p { margin: 10px 0; }
+        
+        /* Footer */
+        footer { text-align: center; padding: 20px 0; background-color: #333; color: white; font-size: 14px; }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container { padding: 0 15px; }
+            section { padding: 40px 0; }
+            header h1 { font-size: 26px; }
+            .section-title h2 { font-size: 24px; }
+        }
+    </style>
 </head>
 <body>
 
-<h1>PNK SOFT 공식 웹사이트</h1>
+    <header>
+        <div class="container">
+            <h1>PNK SOFT 공식 웹사이트</h1>
+            <p>VioPlayer - 완벽한 미디어 경험을 위한 차세대 플레이어</p>
+        </div>
+    </header>
 
-<div class="box">
-    <h2>회사 정보</h2>
-    <p><strong>회사명(상호):</strong> PNK SOFT</p>
-    <p><strong>사업자등록번호:</strong> 4987900601</p>
-    <p><strong>주소:</strong> 경기도 용인시 수지구 신수로 767 B동</p>
-    <p><strong>이메일:</strong> qkdgpqkdgp@naver.com</p>
-</div>
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>VioPlayer 주요 기능</h2>
+            </div>
+            <div class="feature-grid">
+                
+                <div class="feature-item">
+                    <img src="screen1.jpg" alt="모든 포맷 지원">
+                    <h3>모든 포맷 지원</h3>
+                    <p>3GP, MKV, AVI, 4K UHD 등 다양한 미디어 포맷을 완벽하게 재생합니다.</p>
+                </div>
 
-<br>
+                <div class="feature-item">
+                    <img src="screen2.jpg" alt="HDR 지원">
+                    <h3>최첨단 HDR 지원</h3>
+                    <p>고명암 대비(HDR) 기술로 생생하고 깊이 있는 화면을 제공합니다.</p>
+                </div>
 
-<div class="box">
-    <h2>서비스 정보</h2>
-    <p><strong>앱 이름:</strong> VioPlayer</p>
-    <p>이 웹사이트는 Vio Player Android 앱의 공식 안내 페이지입니다.</p>
-</div>
+                <div class="feature-item">
+                    <img src="screen3.jpg" alt="UPSCALE 기능">
+                    <h3>UPSCALE (화질 개선)</h3>
+                    <p>저해상도 영상도 고화질로 변환하여 더욱 선명하게 시청할 수 있습니다.</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="screen4.jpg" alt="Split Playback">
+                    <h3>Split Playback (분할 재생)</h3>
+                    <p>화면을 분할하여 여러 영상을 동시에 끊김 없이 재생할 수 있습니다.</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="screen5.jpg" alt="Video PopUp">
+                    <h3>Video PopUp (팝업 재생)</h3>
+                    <p>다른 앱을 사용하면서도 영상을 작은 창으로 띄워 계속 시청할 수 있습니다.</p>
+                </div>
+
+                <div class="feature-item">
+                    <img src="screen6.jpg" alt="Gesture 제스처">
+                    <h3>직관적인 제스처 제어</h3>
+                    <p>밝기, 볼륨, 탐색 등을 화면 터치만으로 쉽게 조작할 수 있습니다.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="company-info" class="company-info">
+        <div class="container">
+            <div class="info-box">
+                <h2>PNK SOFT 회사 및 서비스 정보</h2>
+                <p><strong>회사명(상호):</strong> PNK SOFT</p>
+                <p><strong>사업자등록번호:</strong> 4987900601</p>
+                <p><strong>주소:</strong> 경기도 용인시 수지구 신수로 767 B동</p>
+                <p><strong>이메일:</strong> qkdgpqkdgp@naver.com</p>
+                <p><strong>서비스 앱 이름:</strong> Player</p>
+                <p>본 웹사이트는 Player Android 앱의 공식 개발사 정보 및 안내 페이지입니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            &copy; 2025 PNK SOFT. All rights reserved.
+        </div>
+    </footer>
 
 </body>
 </html>
