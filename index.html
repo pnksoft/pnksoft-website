@@ -20,11 +20,15 @@
         .section-title { text-align: center; margin-bottom: 40px; }
         .section-title h2 { font-size: 30px; font-weight: 600; border-bottom: 3px solid #2c3e50; display: inline-block; padding-bottom: 5px; }
 
-        /* Feature Grid */
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        /* Feature Grid & Custom Layout */
+        .feature-grid { display: grid; gap: 30px; }
+        .full-width-item { grid-column: 1 / -1; } /* 가로 이미지가 전체 너비를 차지하도록 설정 */
+        .two-column-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; } /* 세로 이미지 2개씩 배치 */
+        
         .feature-item { text-align: center; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); transition: transform 0.3s; }
         .feature-item:hover { transform: translateY(-5px); }
         .feature-item img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 15px; border: 1px solid #eee; }
+        .feature-item.full-width-item img { max-height: 400px; object-fit: contain; } /* 가로 이미지 높이 제한 */
         .feature-item h3 { font-size: 20px; margin-top: 0; color: #34495e; }
 
         /* Company Info */
@@ -43,6 +47,7 @@
             section { padding: 40px 0; }
             header h1 { font-size: 26px; }
             .section-title h2 { font-size: 24px; }
+            .two-column-grid { grid-template-columns: 1fr; } /* 모바일에서 세로 이미지를 한 줄로 */
         }
     </style>
 </head>
@@ -60,44 +65,46 @@
             <div class="section-title">
                 <h2>VioPlayer 주요 기능</h2>
             </div>
+            
             <div class="feature-grid">
                 
-                <div class="feature-item">
+                <div class="feature-item full-width-item">
                     <img src="screen1.png" alt="모든 포맷 지원">
                     <h3>모든 포맷 지원</h3>
                     <p>3GP, MKV, AVI, 4K UHD 등 다양한 미디어 포맷을 완벽하게 재생합니다.</p>
                 </div>
 
-                <div class="feature-item">
-                    <img src="screen2.png" alt="HDR 지원">
-                    <h3>최첨단 HDR 지원</h3>
-                    <p>고명암 대비(HDR) 기술로 생생하고 깊이 있는 화면을 제공합니다.</p>
+                <div class="two-column-grid">
+                    <div class="feature-item">
+                        <img src="screen2.png" alt="HDR 지원">
+                        <h3>최첨단 HDR 지원</h3>
+                        <p>고명암 대비(HDR) 기술로 생생하고 깊이 있는 화면을 제공합니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="screen3.png" alt="UPSCALE 기능">
+                        <h3>UPSCALE (화질 개선)</h3>
+                        <p>저해상도 영상도 고화질로 변환하여 더욱 선명하게 시청할 수 있습니다.</p>
+                    </div>
                 </div>
 
-                <div class="feature-item">
-                    <img src="screen3.png" alt="UPSCALE 기능">
-                    <h3>UPSCALE (화질 개선)</h3>
-                    <p>저해상도 영상도 고화질로 변환하여 더욱 선명하게 시청할 수 있습니다.</p>
+                <div class="two-column-grid">
+                    <div class="feature-item">
+                        <img src="screen4.png" alt="Split Playback">
+                        <h3>Split Playback (분할 재생)</h3>
+                        <p>화면을 분할하여 여러 영상을 동시에 끊김 없이 재생할 수 있습니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="screen5.png" alt="Video PopUp">
+                        <h3>Video PopUp (팝업 재생)</h3>
+                        <p>다른 앱을 사용하면서도 영상을 작은 창으로 띄워 계속 시청할 수 있습니다.</p>
+                    </div>
                 </div>
 
-                <div class="feature-item">
-                    <img src="screen4.png" alt="Split Playback">
-                    <h3>Split Playback (분할 재생)</h3>
-                    <p>화면을 분할하여 여러 영상을 동시에 끊김 없이 재생할 수 있습니다.</p>
-                </div>
-
-                <div class="feature-item">
-                    <img src="screen5.png" alt="Video PopUp">
-                    <h3>Video PopUp (팝업 재생)</h3>
-                    <p>다른 앱을 사용하면서도 영상을 작은 창으로 띄워 계속 시청할 수 있습니다.</p>
-                </div>
-
-                <div class="feature-item">
+                <div class="feature-item full-width-item">
                     <img src="screen6.png" alt="Gesture 제스처">
                     <h3>직관적인 제스처 제어</h3>
                     <p>밝기, 볼륨, 탐색 등을 화면 터치만으로 쉽게 조작할 수 있습니다.</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -105,13 +112,13 @@
     <section id="company-info" class="company-info">
         <div class="container">
             <div class="info-box">
-                <h2>PNK SOFT 회사 및 서비스 정보</h2>
+                <h2>PNK SOFT 회사 및 서비스 정보 (Play Console 인증용)</h2>
                 <p><strong>회사명(상호):</strong> PNK SOFT</p>
                 <p><strong>사업자등록번호:</strong> 4987900601</p>
                 <p><strong>주소:</strong> 경기도 용인시 수지구 신수로 767 B동</p>
                 <p><strong>이메일:</strong> qkdgpqkdgp@naver.com</p>
-                <p><strong>서비스 앱 이름:</strong> Player</p>
-                <p>본 웹사이트는 Player Android 앱의 공식 개발사 정보 및 안내 페이지입니다.</p>
+                <p><strong>서비스 앱 이름:</strong> VioPlayer</p>
+                <p>본 웹사이트는 Vio Player Android 앱의 공식 개발사 정보 및 안내 페이지입니다.</p>
             </div>
         </div>
     </section>
